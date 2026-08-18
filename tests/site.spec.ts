@@ -2,17 +2,18 @@ import { expect, test } from "@playwright/test";
 import AxeBuilder from "@axe-core/playwright";
 
 const expectedSectionIds = ["istruzione", "esperienze-lavorative", "progetti-formativi", "volontariato", "sport", "corsi", "competenze"];
+const basePath = "/curriculum-vitae";
 
 const mainPages = [
-  { route: "/", lang: "it", heading: "Paolo Rossi", annexes: "/annessi/", location: "Merano e Trento, Italia", moreInfo: "Visita il sito per maggiori informazioni." },
-  { route: "/en/", lang: "en", heading: "Paolo Rossi", annexes: "/en/appendices/", location: "Merano and Trento, Italy", moreInfo: "Visit the website for more information." },
-  { route: "/de/", lang: "de", heading: "Paolo Rossi", annexes: "/de/anhaenge/", location: "Meran und Trient, Italien", moreInfo: "Besuchen Sie die Website, um weitere Informationen zu erhalten." }
+  { route: `${basePath}/`, lang: "it", heading: "Paolo Rossi", annexes: `${basePath}/annessi/`, location: "Merano e Trento, Italia", moreInfo: "Visita il sito per maggiori informazioni." },
+  { route: `${basePath}/en/`, lang: "en", heading: "Paolo Rossi", annexes: `${basePath}/en/appendices/`, location: "Merano and Trento, Italy", moreInfo: "Visit the website for more information." },
+  { route: `${basePath}/de/`, lang: "de", heading: "Paolo Rossi", annexes: `${basePath}/de/anhaenge/`, location: "Meran und Trient, Italien", moreInfo: "Besuchen Sie die Website, um weitere Informationen zu erhalten." }
 ];
 
 const annexPages = [
-  { route: "/annessi/", lang: "it", heading: "Annessi" },
-  { route: "/en/appendices/", lang: "en", heading: "Additional information" },
-  { route: "/de/anhaenge/", lang: "de", heading: "Ergänzende Informationen" }
+  { route: `${basePath}/annessi/`, lang: "it", heading: "Annessi" },
+  { route: `${basePath}/en/appendices/`, lang: "en", heading: "Additional information" },
+  { route: `${basePath}/de/anhaenge/`, lang: "de", heading: "Ergänzende Informationen" }
 ];
 
 for (const pageCase of [...mainPages, ...annexPages]) {
@@ -36,6 +37,10 @@ for (const pageCase of mainPages) {
     await expect(page.getByText(pageCase.location, { exact: true })).toBeVisible();
     await expect(page.locator(`a[href="${pageCase.annexes}"]`).first()).toBeVisible();
     await expect(page.locator(".print-site-link")).toHaveText(pageCase.moreInfo);
+    expect(await page.locator("body").evaluate((body) => getComputedStyle(body).fontFamily)).toContain("ui-sans-serif");
+    const portrait = page.locator(`img[src="${basePath}/photo-paolo-rossi.jpg"]`);
+    await expect(portrait).toHaveCount(1);
+    expect(await portrait.evaluate((image) => image instanceof HTMLImageElement ? image.naturalWidth : 0)).toBeGreaterThan(0);
 
     const results = await new AxeBuilder({ page }).analyze();
     expect(results.violations.filter((violation) => ["serious", "critical"].includes(violation.impact ?? ""))).toEqual([]);
@@ -55,7 +60,7 @@ for (const pageCase of mainPages) {
 }
 
 test("language switcher preserves page context", async ({ page }) => {
-  await page.goto("/annessi/");
+  await page.goto(`${basePath}/annessi/`);
   await page.getByRole("navigation", { name: "Lingua" }).getByText("DE").click();
   await expect(page).toHaveURL(/\/de\/anhaenge\/$/);
   await page.getByRole("navigation", { name: "Sprache" }).getByText("EN").click();
@@ -63,22 +68,22 @@ test("language switcher preserves page context", async ({ page }) => {
 });
 
 test("keyboard users reach the skip link first", async ({ page }) => {
-  await page.goto("/");
+  await page.goto(`${basePath}/`);
   await page.keyboard.press("Tab");
   await expect(page.locator(".skip-link")).toBeFocused();
 });
 
 test("published contact information contains email but no phone link", async ({ page }) => {
-  await page.goto("/");
+  await page.goto(`${basePath}/`);
   const emailLink = page.locator('a[href^="mailto:"]');
   await expect(emailLink).toHaveCount(1);
   await expect(emailLink).toHaveCSS("white-space", "nowrap");
   await expect(page.locator('a[href^="tel:"]')).toHaveCount(0);
-  await expect(page.locator('.print-footer a[href="https://paoloros.github.io"]')).toHaveCount(1);
+  await expect(page.locator('.print-footer a[href="https://paoloros.github.io/curriculum-vitae/"]')).toHaveCount(1);
 });
 
 test("annex pages do not display a subtitle", async ({ page }) => {
-  await page.goto("/annessi/");
+  await page.goto(`${basePath}/annessi/`);
   await expect(page.locator(".annex-hero > p:not(.eyebrow)")).toHaveCount(0);
   await expect(page.locator(".annex")).toHaveCount(6);
   await expect(page.locator("#corsi-vvff")).toHaveCount(0);

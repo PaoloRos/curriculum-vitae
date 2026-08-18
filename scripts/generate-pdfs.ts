@@ -2,13 +2,15 @@ import fs from "node:fs";
 import http from "node:http";
 import path from "node:path";
 import { chromium } from "@playwright/test";
+import { loadSite } from "../src/lib/content.ts";
 
 const dist = path.join(process.cwd(), "dist");
 const downloads = path.join(dist, "downloads");
+const basePath = new URL(loadSite().site_url).pathname.replace(/\/$/, "");
 const pages = [
-  { route: "/", file: "Paolo-Rossi-CV-it.pdf" },
-  { route: "/en/", file: "Paolo-Rossi-CV-en.pdf" },
-  { route: "/de/", file: "Paolo-Rossi-CV-de.pdf" }
+  { route: `${basePath}/`, file: "Paolo-Rossi-CV-it.pdf" },
+  { route: `${basePath}/en/`, file: "Paolo-Rossi-CV-en.pdf" },
+  { route: `${basePath}/de/`, file: "Paolo-Rossi-CV-de.pdf" }
 ];
 
 if (!fs.existsSync(path.join(dist, "index.html"))) {
@@ -26,7 +28,10 @@ const contentTypes: Record<string, string> = {
 
 const server = http.createServer((request, response) => {
   const requestPath = decodeURIComponent(new URL(request.url ?? "/", "http://127.0.0.1").pathname);
-  const relative = requestPath.endsWith("/") ? `${requestPath}index.html` : requestPath;
+  const sitePath = basePath && (requestPath === basePath || requestPath.startsWith(`${basePath}/`))
+    ? requestPath.slice(basePath.length) || "/"
+    : requestPath;
+  const relative = sitePath.endsWith("/") ? `${sitePath}index.html` : sitePath;
   const resolved = path.resolve(dist, `.${relative}`);
   if (!resolved.startsWith(`${dist}${path.sep}`) || !fs.existsSync(resolved)) {
     response.writeHead(404).end("Not found");

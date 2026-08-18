@@ -1,5 +1,5 @@
 {
-  "name": "paoloros.github.io",
+  "name": "curriculum-vitae",
   "version": "1.0.0",
   "private": true,
   "type": "module",
@@ -11,8 +11,9 @@
     "verify": "npm run check && playwright test",
     "build:site": "ASTRO_TELEMETRY_DISABLED=1 astro build",
     "pdf": "node scripts/generate-pdfs.ts",
+    "verify:site": "node scripts/verify-site-build.ts",
     "verify:pdf": "node scripts/verify-pdfs.ts",
-    "build": "npm run build:site && npm run pdf && npm run verify:pdf",
+    "build": "npm run build:site && npm run pdf && npm run verify:site && npm run verify:pdf",
     "preview": "ASTRO_TELEMETRY_DISABLED=1 astro preview",
     "update-date": "node scripts/update-date.ts"
   },

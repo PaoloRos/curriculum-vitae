@@ -81,7 +81,7 @@ Avvia il server di sviluppo:
 npm run dev
 ```
 
-Apri l’indirizzo indicato nel terminale, normalmente `http://localhost:4321`. Le pagine si aggiornano mentre salvi i file. Controlla almeno italiano, inglese, tedesco e una pagina degli annessi.
+Apri l’indirizzo indicato nel terminale, normalmente `http://localhost:4321/curriculum-vitae/`. Le pagine si aggiornano mentre salvi i file. Controlla almeno italiano, inglese, tedesco e una pagina degli annessi.
 
 ## 8. Verifica e rigenerazione
 
@@ -117,13 +117,14 @@ Il progetto include `.github/workflows/deploy.yml`, ma non crea repository remot
 
 Quando sei soddisfatto del risultato:
 
-1. crea su GitHub il repository pubblico `PaoloRos.github.io`;
+1. usa su GitHub il repository pubblico `PaoloRos/curriculum-vitae`;
 2. inizializza Git localmente e controlla con attenzione i file da pubblicare;
 3. collega il repository remoto, crea il commit ed esegui personalmente il push su `main`;
 4. in **Settings → Pages**, scegli **GitHub Actions** come sorgente;
 5. attendi il completamento del workflow **Deploy CV site to GitHub Pages**.
 
+Il sito sarà pubblicato in `https://paoloros.github.io/curriculum-vitae/`. Il sottopercorso è configurato in `astro.config.mjs`; non rimuovere `base: "/curriculum-vitae"` finché il nome del repository resta invariato.
+
 Prima del primo `git add`, usa `git status --short --ignored` e verifica che `CV-italiano.pages`, `CV_2-italiano.md` e `CV_2-italiano-assets/` risultino ignorati.
 
 Ogni push successivo su `main` eseguirà nuovamente controlli, build, generazione dei PDF e pubblicazione. Se un controllo fallisce, il sito esistente non viene sostituito.
-
