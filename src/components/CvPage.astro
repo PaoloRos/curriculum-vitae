@@ -1,0 +1,89 @@
+---
+import type { Locale } from "../lib/content";
+import { loadAllCv, loadSite } from "../lib/content";
+import { routes } from "../lib/routes";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import SiteHeader from "./SiteHeader.astro";
+import SiteFooter from "./SiteFooter.astro";
+
+interface Props { locale: Locale }
+const { locale } = Astro.props;
+const site = loadSite();
+const cv = loadAllCv()[locale];
+const annexNumber = new Map(cv.annexes.map((annex) => [annex.id, annex.number]));
+const indexedSections = cv.sections.map((section, index) => ({ section, index }));
+const secondColumnStart = indexedSections.findIndex(({ section }) => section.id === "sport");
+const sectionColumns = [indexedSections.slice(0, secondColumnStart), indexedSections.slice(secondColumnStart)];
+---
+<BaseLayout locale={locale} title={cv.seo_title} description={cv.seo_description} pageKind="cv" siteUrl={site.site_url}>
+  <SiteHeader locale={locale} cv={cv} site={site} pageKind="cv" />
+  <main id="contenuto">
+    <section class="hero shell" aria-labelledby="page-title">
+      <div class="hero-copy">
+        <p class="eyebrow">{cv.labels.cv}</p>
+        <h1 id="page-title">{site.name}</h1>
+        <div class="intro">
+          {cv.intro.map((paragraph) => <p>{paragraph}</p>)}
+        </div>
+        <a class="button hero-download" href={routes[locale].pdf} download>{cv.labels.download_pdf}</a>
+      </div>
+      <figure class="portrait-wrap">
+        <div class="portrait-accent" aria-hidden="true"></div>
+        <img class="portrait" src={site.photo} width="640" height="614" alt="" />
+      </figure>
+      <dl class="identity-card" aria-label={cv.labels.profile}>
+        <div><dt>{cv.labels.birth_year}</dt><dd>{site.birth_year}</dd></div>
+        <div><dt>{cv.labels.location}</dt><dd>{cv.identity.location}</dd></div>
+        <div><dt>{cv.labels.nationality}</dt><dd>{cv.identity.nationality}</dd></div>
+        <div><dt>{cv.labels.mother_tongue}</dt><dd>{cv.identity.mother_tongue}</dd></div>
+        <div><dt>{cv.labels.email}</dt><dd><a href={`mailto:${site.email}`}>{site.email}</a></dd></div>
+      </dl>
+    </section>
+
+    <nav class="section-index shell" aria-labelledby="contents-title">
+      <p class="eyebrow" id="contents-title">{cv.labels.contents}</p>
+      <ol>
+        {cv.sections.map((section, index) => (
+          <li><a href={`#${section.id}`}><span>{String(index + 1).padStart(2, "0")}</span>{section.title}</a></li>
+        ))}
+      </ol>
+    </nav>
+
+    <div class="cv-sections shell">
+      {sectionColumns.map((column) => (
+        <div class="cv-column">
+          {column.map(({ section, index }) => (
+            <section class="cv-section" id={section.id} aria-labelledby={`${section.id}-title`}>
+              <header class="section-heading">
+                <span>{String(index + 1).padStart(2, "0")}</span>
+                <h2 id={`${section.id}-title`}>{section.title}</h2>
+              </header>
+              <div class="section-entries">
+                {section.entries.map((entry) => (
+                  <article class="entry">
+                    <header>
+                      <h3>{entry.heading}</h3>
+                      {entry.meta && <p class="entry-meta">{entry.meta}</p>}
+                    </header>
+                    {entry.paragraphs?.map((paragraph) => <p>{paragraph}</p>)}
+                    {entry.bullets && <ul>{entry.bullets.map((bullet) => <li>{bullet}</li>)}</ul>}
+                    {entry.annex_ids && (
+                      <div class="annex-links">
+                        {entry.annex_ids.map((annexId) => (
+                          <a href={`${routes[locale].annexes}#${annexId}`}>
+                            {cv.labels.annex_link.replace("{number}", String(annexNumber.get(annexId)))}
+                          </a>
+                        ))}
+                      </div>
+                    )}
+                  </article>
+                ))}
+              </div>
+            </section>
+          ))}
+        </div>
+      ))}
+    </div>
+  </main>
+  <SiteFooter locale={locale} cv={cv} site={site} />
+</BaseLayout>

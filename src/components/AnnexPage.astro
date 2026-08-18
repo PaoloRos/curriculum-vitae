@@ -1,0 +1,46 @@
+---
+import type { Locale } from "../lib/content";
+import { loadAllCv, loadSite } from "../lib/content";
+import { routes } from "../lib/routes";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import SiteHeader from "./SiteHeader.astro";
+import SiteFooter from "./SiteFooter.astro";
+
+interface Props { locale: Locale }
+const { locale } = Astro.props;
+const site = loadSite();
+const cv = loadAllCv()[locale];
+const title = `${cv.labels.annexes} — ${site.name}`;
+---
+<BaseLayout locale={locale} title={title} description={cv.labels.annexes_intro} pageKind="annexes" siteUrl={site.site_url}>
+  <SiteHeader locale={locale} cv={cv} site={site} pageKind="annexes" />
+  <main id="contenuto" class="annex-main shell">
+    <header class="annex-hero">
+      <p class="eyebrow">{site.name}</p>
+      <h1>{cv.labels.annexes}</h1>
+      <a class="back-link" href={routes[locale].cv}>← {cv.labels.back_to_cv}</a>
+    </header>
+    <nav class="section-index annex-index" aria-labelledby="contents-title">
+      <p class="eyebrow" id="contents-title">{cv.labels.contents}</p>
+      <ol>
+        {cv.annexes.map((annex) => (
+          <li><a href={`#${annex.id}`}><span>{String(annex.number).padStart(2, "0")}</span>{annex.title}</a></li>
+        ))}
+      </ol>
+    </nav>
+    <div class="annex-list">
+      {cv.annexes.map((annex) => (
+        <article class="annex" id={annex.id}>
+          <span class="annex-number">{String(annex.number).padStart(2, "0")}</span>
+          <div>
+            <h2>{annex.title}</h2>
+            {annex.paragraphs.map((paragraph) => <p>{paragraph}</p>)}
+            {annex.bullets && <ul>{annex.bullets.map((bullet) => <li>{bullet}</li>)}</ul>}
+            <a class="back-link" href={routes[locale].cv}>← {cv.labels.back_to_cv}</a>
+          </div>
+        </article>
+      ))}
+    </div>
+  </main>
+  <SiteFooter locale={locale} cv={cv} site={site} />
+</BaseLayout>

@@ -1,0 +1,13 @@
+# Private source material: never publish these files.
+/CV-italiano.pages
+/CV_2-italiano.md
+/CV_2-italiano-assets/
+
+# Generated and local files.
+/dist/
+/node_modules/
+/.astro/
+/test-results/
+/playwright-report/
+/tmp/
+.DS_Store

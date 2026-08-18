@@ -1,0 +1,41 @@
+---
+import "../styles/global.css";
+import type { Locale } from "../lib/content";
+import { routes } from "../lib/routes";
+
+interface Props {
+  locale: Locale;
+  title: string;
+  description: string;
+  pageKind: "cv" | "annexes";
+  siteUrl: string;
+}
+
+const { locale, title, description, pageKind, siteUrl } = Astro.props;
+const canonicalPath = routes[locale][pageKind];
+const canonical = new URL(canonicalPath, siteUrl);
+---
+<!doctype html>
+<html lang={locale}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content={description} />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="theme-color" content="#12344d" />
+    <link rel="canonical" href={canonical} />
+    {Object.entries(routes).map(([lang, localeRoutes]) => (
+      <link rel="alternate" hreflang={lang} href={new URL(localeRoutes[pageKind], siteUrl)} />
+    ))}
+    <link rel="alternate" hreflang="x-default" href={new URL(routes.it[pageKind], siteUrl)} />
+    <meta property="og:type" content="profile" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>
+

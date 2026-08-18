@@ -1,0 +1,145 @@
+locale: it
+seo_title: Paolo Rossi — Curriculum vitae
+seo_description: Curriculum vitae di Paolo Rossi, laureato in Ingegneria Industriale.
+labels:
+  skip: Vai al contenuto
+  cv: Curriculum
+  annexes: Annessi
+  download_pdf: Scarica il CV in PDF
+  language: Lingua
+  contents: Indice
+  profile: Profilo
+  birth_year: Anno di nascita
+  location: Domicilio
+  nationality: Nazionalità
+  mother_tongue: Madrelingua
+  email: Email
+  last_updated: "Ultimo aggiornamento: {date}"
+  more_info: "Visita il {link} per maggiori informazioni."
+  site_link: sito
+  back_to_cv: Torna al curriculum
+  annex_link: "Vedi annesso {number}"
+  annexes_intro: Approfondimenti sulle esperienze, sui corsi e sulle certificazioni citati nel curriculum.
+identity:
+  location: Merano e Trento, Italia
+  nationality: Italiana
+  mother_tongue: Italiano
+intro:
+  - Sono laureato in ingegneria industriale e nutro un particolare interesse per l’analisi dei dati e lo sviluppo software.
+  - Nel tempo libero pratico diversi sport, preferibilmente a contatto con la natura. Mi dedico inoltre alla lettura di testi su argomenti diversi e ascolto volentieri rock classico e jazz.
+
+sections:
+  - id: istruzione
+    title: Istruzione
+    entries:
+      - heading: Laurea in Ingegneria industriale
+        meta: Università di Trento · marzo 2026 · conseguita in corso nella sessione dell’a.a. 2024/25
+        paragraphs:
+          - Laurea triennale di classe L-9, indirizzo Sistemi, conseguita con votazione 100/110.
+          - Anticipati alcuni insegnamenti del corso di laurea magistrale in ingegneria meccatronica; iscrizione prevista per settembre 2026.
+      - heading: Diploma di maturità classica
+        meta: I.I.S.S. Gandhi, Merano · 2022
+        paragraphs:
+          - Diploma EQF livello 4, conseguito con votazione 90/100.
+  - id: esperienze-lavorative
+    title: Esperienze lavorative
+    entries:
+      - heading: Educatore di italiano e inglese
+        meta: We For You · luglio 2024
+        paragraphs:
+          - Attività educative rivolte a bambini di madrelingua tedesca.
+        annex_ids: [esperienza-we-for-you]
+      - heading: Attività stagionale nella raccolta delle mele
+        meta: Autunno 2022
+        paragraphs:
+          - Esperienza nel settore della coltivazione di pomacee e frutta a nocciolo.
+      - heading: Esperienze nella ristorazione
+        meta: 2020–2023
+        paragraphs:
+          - Esperienze nel servizio di ristorazione e nella vendita al pubblico presso McDonald’s e la Gelateria Oasi di Merano.
+        annex_ids: [esperienza-ristorazione-2020, esperienza-ristorazione-2021, esperienza-gelateria-2023]
+  - id: progetti-formativi
+    title: Progetti formativi
+    entries:
+      - heading: Learning in Plurality — Lernen in der Vielfalt
+        meta: Erasmus+ · 2017–2020
+        paragraphs:
+          - Progetto formativo europeo svoltosi in Austria, Germania e Romania.
+  - id: volontariato
+    title: Volontariato
+    entries:
+      - heading: Corpo dei Vigili del Fuoco Volontari di Maia Bassa
+        meta: Dal 2021
+        paragraphs:
+          - Membro attivo con grado di servizio Feuerwehrmann, vigile del fuoco semplice.
+      - heading: AVIS Comunale di Merano e Burgraviato ODV
+        meta: Dal 2022
+        paragraphs:
+          - Socio donatore effettivo.
+  - id: sport
+    title: Carriera sportiva agonistica
+    entries:
+      - heading: Atletica leggera
+        paragraphs:
+          - Mezzofondista con partecipazioni a competizioni di livello nazionale; attualmente tesserato presso Merano Atletica Running.
+        annex_ids: [carriera-atletica]
+      - heading: Hockey su ghiaccio
+        paragraphs:
+          - Attività svolta durante l’adolescenza presso HC Merano Junior.
+  - id: corsi
+    title: Corsi e certificazioni
+    entries:
+      - heading: Formazione per vigili del fuoco
+        paragraphs:
+          - Diversi corsi svolti presso la Scuola provinciale antincendio dell’Alto Adige, tra cui pronto soccorso Gruppo A (16 ore, 2024) e corso per addetti antincendio di livello basso (4 ore).
+      - heading: Salute e sicurezza sul lavoro
+        paragraphs:
+          - Formazione generale per lavoratori e lavoratrici (4 ore, 2020) e formazione specifica per rischio medio (2022).
+      - heading: Advanced Open Water Diver
+        meta: "2022"
+        paragraphs:
+          - Brevetto subacqueo Advanced Open Water.
+  - id: competenze
+    title: Competenze e lingue
+    entries:
+      - heading: Lingue
+        bullets:
+          - Inglese tecnico di livello B2, certificato dall’Università di Trento; uso quotidiano dell’inglese in ambito ingegneristico e potenziamento in corso verso il livello C1 generale.
+          - Tedesco utilizzato nella vita quotidiana.
+        annex_ids: [certificazione-linguistica]
+      - heading: Competenze informatiche
+        bullets:
+          - Fondamenti di C/C++ e R.
+          - Fondamenti di MATLAB/Simulink e Wolfram Mathematica.
+          - Automazione d’ufficio e strumenti digitali di uso generale.
+annexes:
+  - id: esperienza-ristorazione-2020
+    number: 1
+    title: Esperienza lavorativa 2020 presso McDonald’s di Merano
+    paragraphs:
+      - Tirocinante addetto al servizio di ristorazione. Le responsabilità comprendevano il servizio e l’assistenza ai clienti, la preparazione dei tavoli e il servizio di pietanze e bevande.
+  - id: esperienza-ristorazione-2021
+    number: 2
+    title: Esperienza lavorativa 2021 presso McDonald’s di Merano
+    paragraphs:
+      - Ruolo di crew con mansioni operative connesse al servizio di ristorazione.
+  - id: esperienza-gelateria-2023
+    number: 3
+    title: Esperienza lavorativa 2023 presso la Gelateria Oasi di Merano
+    paragraphs:
+      - Attività di servizio al banco e vendita del gelato ai clienti.
+  - id: carriera-atletica
+    number: 5
+    title: Carriera di atletica leggera
+    paragraphs:
+      - Partecipazione a quattro campionati italiani su pista e a tre campionati italiani di corsa campestre.
+  - id: esperienza-we-for-you
+    number: 6
+    title: Esperienza lavorativa presso We For You nel 2024
+    paragraphs:
+      - Educatore incaricato di favorire la conversazione in italiano e inglese con bambini di madrelingua tedesca tra i 9 e i 12 anni, attraverso lezioni frontali e attività ludico-ricreative.
+  - id: certificazione-linguistica
+    number: 7
+    title: Certificazione linguistica
+    paragraphs:
+      - Livello B2 di inglese specialistico certificato dal Centro Linguistico di Ateneo dell’Università di Trento.

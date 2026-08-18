@@ -1,0 +1,35 @@
+{
+  "name": "paoloros.github.io",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "ASTRO_TELEMETRY_DISABLED=1 ASTRO_DEV_BACKGROUND=0 astro dev",
+    "check": "npm run validate:content && ASTRO_TELEMETRY_DISABLED=1 astro check && npm run check:privacy",
+    "validate:content": "node scripts/validate-content.ts",
+    "check:privacy": "node scripts/check-privacy.ts",
+    "verify": "npm run check && playwright test",
+    "build:site": "ASTRO_TELEMETRY_DISABLED=1 astro build",
+    "pdf": "node scripts/generate-pdfs.ts",
+    "verify:pdf": "node scripts/verify-pdfs.ts",
+    "build": "npm run build:site && npm run pdf && npm run verify:pdf",
+    "preview": "ASTRO_TELEMETRY_DISABLED=1 astro preview",
+    "update-date": "node scripts/update-date.ts"
+  },
+  "dependencies": {
+    "astro": "^7.2.2",
+    "pdfjs-dist": "^6.2.108",
+    "yaml": "^2.9.0",
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.10",
+    "@axe-core/playwright": "^4.13.0",
+    "@playwright/test": "^1.62.1",
+    "@types/node": "^26.2.0",
+    "typescript": "^6.0.3"
+  },
+  "allowScripts": {
+    "esbuild@0.28.2": true
+  }
+}

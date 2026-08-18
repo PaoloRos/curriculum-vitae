@@ -1,0 +1,24 @@
+---
+import type { CvContent, Locale, SiteContent } from "../lib/content";
+import { formatUpdatedDate } from "../lib/content";
+
+interface Props {
+  locale: Locale;
+  cv: CvContent;
+  site: SiteContent;
+}
+
+const { locale, cv, site } = Astro.props;
+const updated = cv.labels.last_updated.replace("{date}", formatUpdatedDate(site.last_updated, locale));
+const [moreInfoBefore, moreInfoAfter] = cv.labels.more_info.split("{link}");
+---
+<footer class="site-footer">
+  <p>{updated}</p>
+  <p>© {new Date().getUTCFullYear()} {site.name}</p>
+</footer>
+<div class="print-footer">
+  <p class="print-site-link">
+    {moreInfoBefore}<a href={site.site_url}>{cv.labels.site_link}</a>{moreInfoAfter}
+  </p>
+  <p>{updated}</p>
+</div>

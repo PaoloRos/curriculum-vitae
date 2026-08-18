@@ -1,0 +1,144 @@
+locale: en
+seo_title: Paolo Rossi — Curriculum vitae
+seo_description: Curriculum vitae of Paolo Rossi, a graduate in Industrial Engineering.
+labels:
+  skip: Skip to content
+  cv: Curriculum
+  annexes: Additional information
+  download_pdf: Download CV as PDF
+  language: Language
+  contents: Contents
+  profile: Profile
+  birth_year: Year of birth
+  location: Based in
+  nationality: Nationality
+  mother_tongue: Native language
+  email: Email
+  last_updated: "Last updated: {date}"
+  more_info: "Visit the {link} for more information."
+  site_link: website
+  back_to_cv: Back to the CV
+  annex_link: "View details {number}"
+  annexes_intro: Additional information about the experience, courses and certifications mentioned in the CV.
+identity:
+  location: Merano and Trento, Italy
+  nationality: Italian
+  mother_tongue: Italian
+intro:
+  - I am an Industrial Engineering graduate with a particular interest in data analysis and software development.
+  - In my free time, I enjoy a variety of sports, preferably outdoors. I also read widely and enjoy listening to classic rock and jazz.
+sections:
+  - id: istruzione
+    title: Education
+    entries:
+      - heading: Bachelor’s degree in Industrial Engineering
+        meta: University of Trento · March 2026 · completed on schedule in the graduation session for the 2024/25 academic year
+        paragraphs:
+          - Bachelor’s degree (class L-9), Systems track, awarded with a final grade of 100/110.
+          - Some courses from the Master’s degree programme in Mechatronics Engineering were taken in advance; enrolment is planned for September 2026.
+      - heading: Classical studies secondary-school diploma
+        meta: I.I.S.S. Gandhi, Merano · 2022
+        paragraphs:
+          - EQF level 4 diploma, completed with a final grade of 90/100.
+  - id: esperienze-lavorative
+    title: Work experience
+    entries:
+      - heading: Italian and English educator
+        meta: We For You · July 2024
+        paragraphs:
+          - Educational activities for German-speaking children.
+        annex_ids: [esperienza-we-for-you]
+      - heading: Seasonal apple-harvesting work
+        meta: Autumn 2022
+        paragraphs:
+          - Experience in the cultivation of pome and stone fruit.
+      - heading: Food-service experience
+        meta: 2020–2023
+        paragraphs:
+          - Experience in food service and customer-facing sales at McDonald’s and Gelateria Oasi in Merano.
+        annex_ids: [esperienza-ristorazione-2020, esperienza-ristorazione-2021, esperienza-gelateria-2023]
+  - id: progetti-formativi
+    title: Educational projects
+    entries:
+      - heading: Learning in Plurality — Lernen in der Vielfalt
+        meta: Erasmus+ · 2017–2020
+        paragraphs:
+          - Progetto formativo europeo svoltosi in Austria, Germania e Romania.
+  - id: volontariato
+    title: Volunteering
+    entries:
+      - heading: Maia Bassa Volunteer Fire Brigade
+        meta: Since 2021
+        paragraphs:
+          - Active member holding the service rank of Feuerwehrmann, firefighter.
+      - heading: AVIS Municipal Association of Merano and Burggrafenamt ODV
+        meta: Since 2022
+        paragraphs:
+          - Registered active blood donor.
+  - id: sport
+    title: Competitive sport
+    entries:
+      - heading: Athletics
+        paragraphs:
+          - Middle-distance runner with appearances in national-level competitions; currently registered with Merano Atletica Running.
+        annex_ids: [carriera-atletica]
+      - heading: Ice hockey
+        paragraphs:
+          - Played during adolescence with HC Merano Junior.
+  - id: corsi
+    title: Courses and certifications
+    entries:
+      - heading: Fire-service training
+        paragraphs:
+          - Various courses completed at the South Tyrol Provincial Fire Service School, including Group A first aid (16 hours, 2024) and low-level fire safety training (4 hours).
+      - heading: Occupational health and safety
+        paragraphs:
+          - General worker training (4 hours, 2020) and role-specific medium-risk health and safety training (2022).
+      - heading: Advanced Open Water Diver
+        meta: "2022"
+        paragraphs:
+          - Advanced Open Water diving certification.
+  - id: competenze
+    title: Skills and languages
+    entries:
+      - heading: Languages
+        bullets:
+          - Technical English at B2 level, certified by the University of Trento; daily use of English in engineering contexts and ongoing development towards C1 in general English.
+          - German used in daily life.
+        annex_ids: [certificazione-linguistica]
+      - heading: Digital skills
+        bullets:
+          - Fundamentals of C/C++ and R.
+          - Fundamentals of MATLAB/Simulink and Wolfram Mathematica.
+          - Office automation and general-purpose digital tools.
+annexes:
+  - id: esperienza-ristorazione-2020
+    number: 1
+    title: 2020 work experience at McDonald’s in Merano
+    paragraphs:
+      - Food-service trainee. Responsibilities included serving and assisting customers, preparing tables, and serving food and beverages.
+  - id: esperienza-ristorazione-2021
+    number: 2
+    title: 2021 work experience at McDonald’s in Merano
+    paragraphs:
+      - Crew role involving operational duties connected with food service.
+  - id: esperienza-gelateria-2023
+    number: 3
+    title: 2023 work experience at Gelateria Oasi in Merano
+    paragraphs:
+      - Counter service and the sale of ice cream to customers.
+  - id: carriera-atletica
+    number: 5
+    title: Athletics career
+    paragraphs:
+      - Participation in four Italian track championships and three Italian cross-country championships.
+  - id: esperienza-we-for-you
+    number: 6
+    title: 2024 work experience with We For You
+    paragraphs:
+      - Educator responsible for helping German-speaking children aged 9 to 12 develop conversational Italian and English through classroom teaching and recreational activities.
+  - id: certificazione-linguistica
+    number: 7
+    title: Language certification
+    paragraphs:
+      - B2 level in specialised English certified by the University of Trento Language Centre.

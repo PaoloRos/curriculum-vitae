@@ -1,0 +1,40 @@
+---
+import type { CvContent, Locale, SiteContent } from "../lib/content";
+import { routes } from "../lib/routes";
+
+interface Props {
+  locale: Locale;
+  cv: CvContent;
+  site: SiteContent;
+  pageKind: "cv" | "annexes";
+}
+
+const { locale, cv, site, pageKind } = Astro.props;
+---
+<a class="skip-link" href="#contenuto">{cv.labels.skip}</a>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="wordmark" href={routes[locale].cv} aria-label={`${site.name} — ${cv.labels.cv}`}>
+      <span>PR</span>
+      <strong>{site.name}</strong>
+    </a>
+    <nav class="primary-nav" aria-label={cv.labels.cv}>
+      <a href={routes[locale].cv} aria-current={pageKind === "cv" ? "page" : undefined}>{cv.labels.cv}</a>
+      <a href={routes[locale].annexes} aria-current={pageKind === "annexes" ? "page" : undefined}>{cv.labels.annexes}</a>
+    </nav>
+    <div class="header-actions">
+      <nav class="language-switcher" aria-label={cv.labels.language}>
+        {(["it", "en", "de"] as Locale[]).map((lang) => (
+          <a
+            href={routes[lang][pageKind]}
+            lang={lang}
+            hreflang={lang}
+            aria-current={locale === lang ? "page" : undefined}
+          >{lang.toUpperCase()}</a>
+        ))}
+      </nav>
+      <a class="button button-small" href={routes[locale].pdf} download>{cv.labels.download_pdf}</a>
+    </div>
+  </div>
+</header>
+

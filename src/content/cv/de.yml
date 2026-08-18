@@ -1,0 +1,144 @@
+locale: de
+seo_title: Paolo Rossi — Lebenslauf
+seo_description: Lebenslauf von Paolo Rossi, Absolvent des Industrieingenieurwesens.
+labels:
+  skip: Zum Inhalt springen
+  cv: Lebenslauf
+  annexes: Ergänzende Informationen
+  download_pdf: Lebenslauf als PDF herunterladen
+  language: Sprache
+  contents: Inhaltsverzeichnis
+  profile: Profil
+  birth_year: Geburtsjahr
+  location: Wohnorte
+  nationality: Staatsangehörigkeit
+  mother_tongue: Muttersprache
+  email: E-Mail
+  last_updated: "Letzte Aktualisierung: {date}"
+  more_info: "Besuchen Sie die {link}, um weitere Informationen zu erhalten."
+  site_link: Website
+  back_to_cv: Zurück zum Lebenslauf
+  annex_link: "Details {number} ansehen"
+  annexes_intro: Ergänzende Informationen zu den im Lebenslauf genannten Erfahrungen, Kursen und Zertifizierungen.
+identity:
+  location: Meran und Trient, Italien
+  nationality: Italienisch
+  mother_tongue: Italienisch
+intro:
+  - Ich habe einen Bachelorabschluss in Industrieingenieurwesen und interessiere mich besonders für Datenanalyse und Softwareentwicklung.
+  - In meiner Freizeit treibe ich verschiedene Sportarten, vorzugsweise in der Natur. Außerdem lese ich zu vielfältigen Themen und höre gerne Classic Rock und Jazz.
+sections:
+  - id: istruzione
+    title: Ausbildung
+    entries:
+      - heading: Bachelorabschluss in Industrieingenieurwesen
+        meta: Universität Trient · März 2026 · in Regelstudienzeit im Abschlussprüfungszeitraum des Studienjahres 2024/25 abgeschlossen
+        paragraphs:
+          - Bachelorstudium der Klasse L-9 mit Schwerpunkt Systeme, abgeschlossen mit 100/110 Punkten.
+          - Einige Lehrveranstaltungen aus dem Masterstudiengang Mechatronik wurden vorgezogen; die Einschreibung ist für September 2026 vorgesehen.
+      - heading: Abschluss eines humanistischen Gymnasiums
+        meta: I.I.S.S. Gandhi, Meran · 2022
+        paragraphs:
+          - Abschluss auf EQR-Niveau 4 mit 90/100 Punkten.
+  - id: esperienze-lavorative
+    title: Berufserfahrung
+    entries:
+      - heading: Betreuer für Italienisch und Englisch
+        meta: We For You · Juli 2024
+        paragraphs:
+          - Bildungsangebote für deutschsprachige Kinder.
+        annex_ids: [esperienza-we-for-you]
+      - heading: Saisonarbeit bei der Apfelernte
+        meta: Herbst 2022
+        paragraphs:
+          - Erfahrung im Anbau von Kern- und Steinobst.
+      - heading: Erfahrungen in der Gastronomie
+        meta: 2020–2023
+        paragraphs:
+          - Erfahrungen im Gastronomieservice und im direkten Kundenkontakt bei McDonald’s und der Gelateria Oasi in Meran.
+        annex_ids: [esperienza-ristorazione-2020, esperienza-ristorazione-2021, esperienza-gelateria-2023]
+  - id: progetti-formativi
+    title: Bildungsprojekte
+    entries:
+      - heading: Learning in Plurality — Lernen in der Vielfalt
+        meta: Erasmus+ · 2017–2020
+        paragraphs:
+          - Europäisches Bildungsprojekt, das in Österreich, Deutschland und Rumänien durchgeführt wurde.
+  - id: volontariato
+    title: Ehrenamt
+    entries:
+      - heading: Freiwillige Feuerwehr Untermais
+        meta: Seit 2021
+        paragraphs:
+          - Aktives Mitglied im Dienstgrad Feuerwehrmann.
+      - heading: AVIS Meran und Burggrafenamt ODV
+        meta: Seit 2022
+        paragraphs:
+          - Aktiver Blutspender.
+  - id: sport
+    title: Leistungssport
+    entries:
+      - heading: Leichtathletik
+        paragraphs:
+          - Mittelstreckenläufer mit Teilnahmen an Wettkämpfen auf nationaler Ebene; derzeit für Merano Atletica Running gemeldet.
+        annex_ids: [carriera-atletica]
+      - heading: Eishockey
+        paragraphs:
+          - In der Jugend bei HC Merano Junior gespielt.
+  - id: corsi
+    title: Kurse und Zertifizierungen
+    entries:
+      - heading: Feuerwehrausbildung
+        paragraphs:
+          - Verschiedene Lehrgänge an der Landesfeuerwehrschule Südtirol, darunter Erste Hilfe der Gruppe A (16 Stunden, 2024) und Brandschutzkurs der niedrigen Stufe (4 Stunden).
+      - heading: Arbeits- und Gesundheitsschutz
+        paragraphs:
+          - Allgemeine Arbeitssicherheitsausbildung (4 Stunden, 2020) und spezifische Ausbildung für mittleres Risiko (2022).
+      - heading: Advanced Open Water Diver
+        meta: "2022"
+        paragraphs:
+          - Tauchbrevet Advanced Open Water.
+  - id: competenze
+    title: Kompetenzen und Sprachen
+    entries:
+      - heading: Sprachen
+        bullets:
+          - Von der Universität Trient zertifiziertes technisches Englisch auf Niveau B2; tägliche Anwendung des Englischen im Ingenieurwesen und laufende Weiterbildung in allgemeinem Englisch mit Zielniveau C1.
+          - Deutsch im täglichen Gebrauch.
+        annex_ids: [certificazione-linguistica]
+      - heading: Digitale Kompetenzen
+        bullets:
+          - Grundlagen in C/C++ und R.
+          - Grundlagen in MATLAB/Simulink und Wolfram Mathematica.
+          - Büroautomatisierung und allgemeine digitale Werkzeuge.
+annexes:
+  - id: esperienza-ristorazione-2020
+    number: 1
+    title: Berufserfahrung 2020 bei McDonald’s in Meran
+    paragraphs:
+      - Praktikant im Gastronomieservice. Zu den Aufgaben gehörten die Bedienung und Beratung der Gäste, die Vorbereitung der Tische sowie das Servieren von Speisen und Getränken.
+  - id: esperienza-ristorazione-2021
+    number: 2
+    title: Berufserfahrung 2021 bei McDonald’s in Meran
+    paragraphs:
+      - Tätigkeit als Crewmitglied mit operativen Aufgaben im Gastronomieservice.
+  - id: esperienza-gelateria-2023
+    number: 3
+    title: Berufserfahrung 2023 bei der Gelateria Oasi in Meran
+    paragraphs:
+      - Thekenservice und Verkauf von Speiseeis an Kunden.
+  - id: carriera-atletica
+    number: 5
+    title: Leichtathletikkarriere
+    paragraphs:
+      - Teilnahme an vier italienischen Bahnmeisterschaften und drei italienischen Crosslaufmeisterschaften.
+  - id: esperienza-we-for-you
+    number: 6
+    title: Berufserfahrung 2024 bei We For You
+    paragraphs:
+      - Betreuer mit der Aufgabe, die italienische und englische Konversation deutschsprachiger Kinder zwischen 9 und 12 Jahren durch Unterricht und spielerische Freizeitaktivitäten zu fördern.
+  - id: certificazione-linguistica
+    number: 7
+    title: Sprachzertifizierung
+    paragraphs:
+      - Vom Sprachenzentrum der Universität Trient zertifiziertes Niveau B2 in Fachenglisch.
