@@ -91,10 +91,13 @@ sections:
     entries:
       - heading: Formazione per vigili del fuoco
         paragraphs:
-          - Diversi corsi svolti presso la Scuola provinciale antincendio dell’Alto Adige, tra cui pronto soccorso Gruppo A (16 ore, 2024) e corso per addetti antincendio di livello basso (4 ore).
+          - >-
+            Corsi frequentati presso la Scuola provinciale antincendio dell’Alto Adige,
+            tra cui: pronto soccorso, Gruppo A (16 h, 2024); addetti antincendio,
+            livello basso (4 h, 2021); corso autorespiratori (2021).
       - heading: Salute e sicurezza sul lavoro
         paragraphs:
-          - Formazione generale per lavoratori e lavoratrici (4 ore, 2020) e formazione specifica per rischio medio (2022).
+          - Formazione generale per lavoratori e lavoratrici (4 h, 2020) e formazione specifica per rischio medio (2022).
       - heading: Advanced Open Water Diver
         meta: "2022"
         paragraphs:

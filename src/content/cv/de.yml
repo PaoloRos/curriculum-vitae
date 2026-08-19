@@ -90,10 +90,13 @@ sections:
     entries:
       - heading: Feuerwehrausbildung
         paragraphs:
-          - Verschiedene Lehrgänge an der Landesfeuerwehrschule Südtirol, darunter Erste Hilfe der Gruppe A (16 Stunden, 2024) und Brandschutzkurs der niedrigen Stufe (4 Stunden).
+          - >-
+            Lehrgänge an der Landesfeuerwehrschule Südtirol, darunter: Erste Hilfe,
+            Gruppe A (16 Std., 2024); Ausbildung für Brandschutzbeauftragte –
+            Stufe niederes Brandrisiko (4 Std., 2021); Atemschutzlehrgang (2021).
       - heading: Arbeits- und Gesundheitsschutz
         paragraphs:
-          - Allgemeine Arbeitssicherheitsausbildung (4 Stunden, 2020) und spezifische Ausbildung für mittleres Risiko (2022).
+          - Allgemeine Arbeitssicherheitsausbildung (4 Std., 2020) und spezifische Ausbildung für mittleres Risiko (2022).
       - heading: Advanced Open Water Diver
         meta: "2022"
         paragraphs:

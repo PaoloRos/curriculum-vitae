@@ -90,10 +90,13 @@ sections:
     entries:
       - heading: Fire-service training
         paragraphs:
-          - Various courses completed at the South Tyrol Provincial Fire Service School, including Group A first aid (16 hours, 2024) and low-level fire safety training (4 hours).
+          - >-
+            Courses attended at the South Tyrol Provincial Fire Service School,
+            including: first aid, Group A (16 hrs, 2024); low-level fire safety
+            course (4 hrs, 2021); breathing apparatus course (2021).
       - heading: Occupational health and safety
         paragraphs:
-          - General worker training (4 hours, 2020) and role-specific medium-risk health and safety training (2022).
+          - General worker training (4 hrs, 2020) and role-specific medium-risk health and safety training (2022).
       - heading: Advanced Open Water Diver
         meta: "2022"
         paragraphs:
