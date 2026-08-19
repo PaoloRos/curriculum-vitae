@@ -39,6 +39,11 @@ for (const [locale, fileName] of Object.entries(files) as [Locale, string][]) {
   if (!linkTargets.some((target) => new URL(target).href === expectedSiteUrl)) {
     throw new Error(`${fileName} does not contain a clickable site link`);
   }
+  if (!normalizedText.includes(site.github_username)) throw new Error(`${fileName} does not display the GitHub username`);
+  const expectedGithubUrl = new URL(site.github_url).href;
+  if (!linkTargets.some((target) => new URL(target).href === expectedGithubUrl)) {
+    throw new Error(`${fileName} does not contain a clickable GitHub link`);
+  }
   if (normalizedText.includes(all[locale].labels.annexes_intro)) throw new Error(`${fileName} unexpectedly contains annex content`);
   if (/\+\d[\d .()-]{7,}\d/.test(normalizedText)) throw new Error(`${fileName} contains a phone-like value`);
 

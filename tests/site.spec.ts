@@ -78,6 +78,12 @@ test("published contact information contains email but no phone link", async ({ 
   const emailLink = page.locator('a[href^="mailto:"]');
   await expect(emailLink).toHaveCount(1);
   await expect(emailLink).toHaveCSS("white-space", "nowrap");
+  const githubLink = page.locator('.identity-card a[href="https://github.com/PaoloRos"]');
+  await expect(githubLink).toHaveCount(1);
+  await expect(githubLink).toContainText("PaoloRos");
+  await expect(githubLink.locator(`img[src="${basePath}/github-mark.png"]`)).toHaveCount(1);
+  await expect(githubLink).toHaveAttribute("target", "_blank");
+  await expect(githubLink).toHaveAttribute("rel", "noopener noreferrer");
   await expect(page.locator('a[href^="tel:"]')).toHaveCount(0);
   await expect(page.locator('.print-footer a[href="https://paoloros.github.io/curriculum-vitae/"]')).toHaveCount(1);
 });

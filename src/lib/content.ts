@@ -69,6 +69,8 @@ export const cvSchema = z.object({
 export const siteSchema = z.object({
   name: z.string().min(1),
   email: z.email(),
+  github_url: z.url(),
+  github_username: z.string().min(1),
   birth_year: z.number().int().min(1900).max(2100),
   last_updated: z.string().regex(/^\d{4}-\d{2}-\d{2}$/),
   photo: z.string().startsWith("/"),

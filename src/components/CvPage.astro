@@ -36,7 +36,16 @@ const sectionColumns = [indexedSections.slice(0, secondColumnStart), indexedSect
         <div><dt>{cv.labels.location}</dt><dd>{cv.identity.location}</dd></div>
         <div><dt>{cv.labels.nationality}</dt><dd>{cv.identity.nationality}</dd></div>
         <div><dt>{cv.labels.mother_tongue}</dt><dd>{cv.identity.mother_tongue}</dd></div>
-        <div><dt>{cv.labels.email}</dt><dd><a href={`mailto:${site.email}`}>{site.email}</a></dd></div>
+        <div class="identity-email"><dt>{cv.labels.email}</dt><dd><a href={`mailto:${site.email}`}>{site.email}</a></dd></div>
+        <div class="identity-github">
+          <dt>GitHub</dt>
+          <dd>
+            <a class="github-link" href={site.github_url} target="_blank" rel="noopener noreferrer">
+              <img src={withBase("/github-mark.png")} width="16" height="16" alt="" />
+              <span>{site.github_username}</span>
+            </a>
+          </dd>
+        </div>
       </dl>
     </section>
 

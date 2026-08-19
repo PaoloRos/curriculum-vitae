@@ -21,7 +21,7 @@ I contenuti sono in tre file YAML:
 
 Ogni modifica sostanziale deve essere riportata in tutti e tre i file. Gli identificatori `id` delle sezioni e degli annessi devono rimanere uguali nelle tre lingue; i controlli automatici segnalano eventuali differenze.
 
-I dati comuni sono in `src/content/site.yml`: nome, email, anno di nascita, data dell’ultimo aggiornamento, fotografia e indirizzo del sito.
+I dati comuni sono in `src/content/site.yml`: nome, email, profilo GitHub, anno di nascita, data dell’ultimo aggiornamento, fotografia e indirizzo del sito. Per cambiare il profilo GitHub, aggiornare insieme `github_url` e `github_username`; la modifica comparirà nel sito e nei tre PDF alla build successiva.
 
 ## 3. Esempio di modifica
 
