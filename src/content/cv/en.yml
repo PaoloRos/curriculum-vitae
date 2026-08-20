@@ -26,7 +26,7 @@ identity:
   mother_tongue: Italian
 intro:
   - I am an Industrial Engineering graduate with a particular interest in data analysis and software development.
-  - In my free time, I enjoy a variety of sports, preferably outdoors. I also read widely and enjoy listening to classic rock and jazz.
+  - In my free time, I enjoy a variety of sports, preferably outdoors. I also read widely and enjoy listening to classic rock and jazz. I like travelling to discover new places and cultures.
 sections:
   - id: istruzione
     title: Education
@@ -100,7 +100,7 @@ sections:
       - heading: Advanced Open Water Diver
         meta: "2022"
         paragraphs:
-          - Advanced Open Water diving certification.
+          - Scuba diving certification qualifying for dives to depths of up to 30 m.
   - id: competenze
     title: Skills and languages
     entries:

@@ -26,7 +26,7 @@ identity:
   mother_tongue: Italienisch
 intro:
   - Ich habe einen Bachelorabschluss in Industrieingenieurwesen und interessiere mich besonders für Datenanalyse und Softwareentwicklung.
-  - In meiner Freizeit treibe ich verschiedene Sportarten, vorzugsweise in der Natur. Außerdem lese ich zu vielfältigen Themen und höre gerne Classic Rock und Jazz.
+  - In meiner Freizeit treibe ich verschiedene Sportarten, vorzugsweise in der Natur. Außerdem lese ich zu vielfältigen Themen und höre gerne Classic Rock und Jazz. Ich reise gerne, um neue Orte und Kulturen kennenzulernen.
 sections:
   - id: istruzione
     title: Ausbildung
@@ -100,7 +100,7 @@ sections:
       - heading: Advanced Open Water Diver
         meta: "2022"
         paragraphs:
-          - Tauchbrevet Advanced Open Water.
+          - Tauchbrevet mit Berechtigung für Tauchgänge bis zu einer Tiefe von 30 m.
   - id: competenze
     title: Kompetenzen und Sprachen
     entries:

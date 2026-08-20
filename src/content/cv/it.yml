@@ -26,7 +26,7 @@ identity:
   mother_tongue: Italiano
 intro:
   - Sono laureato in ingegneria industriale e nutro un particolare interesse per l’analisi dei dati e lo sviluppo software.
-  - Nel tempo libero pratico diversi sport, preferibilmente a contatto con la natura. Mi dedico inoltre alla lettura di testi su argomenti diversi e ascolto volentieri rock classico e jazz.
+  - Nel tempo libero pratico diversi sport, preferibilmente a contatto con la natura. Mi dedico inoltre alla lettura di testi su argomenti diversi e ascolto volentieri rock classico e jazz. Mi piace viaggiare per conoscere nuovi luoghi e culture.
 
 sections:
   - id: istruzione
@@ -101,7 +101,7 @@ sections:
       - heading: Advanced Open Water Diver
         meta: "2022"
         paragraphs:
-          - Brevetto subacqueo Advanced Open Water.
+          - Brevetto subacqueo con abilitazione a immersioni fino a 30 m di profondità.
   - id: competenze
     title: Competenze e lingue
     entries:
