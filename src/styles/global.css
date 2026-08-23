@@ -752,7 +752,6 @@ h3 {
   .portrait {
     width: 27mm;
     height: 31mm;
-    border-radius: 0;
     box-shadow: none;
     filter: none;
   }
