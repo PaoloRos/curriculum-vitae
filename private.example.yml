@@ -1,0 +1,3 @@
+# Copy this file to private/contact.yml (ignored by Git) and write your real number.
+# `npm run pdf:private` adds it to the identity card of the three PDFs in private/pdf/.
+telephone: "+39 000 000 0000"
