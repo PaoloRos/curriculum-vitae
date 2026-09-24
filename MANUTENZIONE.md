@@ -100,18 +100,51 @@ npm run preview
 
 `npm run preview` mostra esattamente i file di produzione. Verifica manualmente i pulsanti di download e apri tutti e tre i PDF.
 
-## 9. Controllo finale
+## 9. PDF privati con numero di telefono
+
+Il numero di telefono non compare mai nel sito né nei PDF pubblicati. Per ottenere una versione da inviare direttamente, generala sul tuo computer.
+
+La prima volta, crea il file con il numero:
+
+```sh
+mkdir -p private
+cp private.example.yml private/contact.yml
+```
+
+Poi scrivi il numero reale in `private/contact.yml`, per esempio `telephone: "+39 333 123 4567"`.
+
+Ogni volta che vuoi i PDF aggiornati, esegui:
+
+```sh
+npm run pdf:private
+```
+
+Il comando ricompila il sito e crea `private/pdf/Paolo-Rossi-CV-it.pdf`, `-en.pdf` e `-de.pdf`, con il numero nel riquadro dei dati personali come link cliccabile. Il numero viene aggiunto solo alla pagina aperta dal browser automatico durante la stampa, quindi non entra mai in `dist/`.
+
+Il comando si interrompe se:
+
+- `private/contact.yml` manca o il numero non è valido;
+- la cartella `private/` non risulta ignorata da Git;
+- i dati personali non stanno più su una sola riga;
+- un PDF supera le due pagine, oppure non mostra il numero esattamente una volta come link;
+- il numero compare in un file pubblicabile.
+
+L’ultimo controllo è `npm run check:private-leak`, eseguito anche da `npm run check` e `npm run build`. Cerca le ultime otto cifre del numero, con qualsiasi separatore, nei file tracciati da Git, in quelli nuovi non ignorati e in `dist/`, compreso il testo dei PDF. In GitHub Actions `private/contact.yml` non esiste e il controllo viene saltato.
+
+Non spostare i PDF privati in `public/` o in `dist/` e non caricarli nel repository.
+
+## 10. Controllo finale
 
 Prima di pubblicare, conferma che:
 
 - i fatti siano identici nelle tre lingue;
-- non compaiano indirizzo, CAP, telefono o data di nascita completa;
+- non compaiano indirizzo, CAP, telefono o data di nascita completa (il telefono è ammesso solo nei PDF di `private/pdf/`);
 - la fotografia sia quella corretta;
 - la data dell’ultimo aggiornamento sia corretta;
 - i PDF siano leggibili e non contengano annessi;
 - la pagina sia utilizzabile sia da telefono sia da desktop.
 
-## 10. Pubblicazione manuale su GitHub Pages
+## 11. Pubblicazione manuale su GitHub Pages
 
 Il progetto include `.github/workflows/deploy.yml`, ma non crea repository remoti e non esegue push autonomamente.
 

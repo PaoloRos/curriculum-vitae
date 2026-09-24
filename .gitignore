@@ -3,6 +3,9 @@
 /CV_2-italiano.md
 /CV_2-italiano-assets/
 
+# Local-only telephone number and the PDFs that contain it.
+/private/
+
 # Generated and local files.
 /dist/
 /node_modules/
