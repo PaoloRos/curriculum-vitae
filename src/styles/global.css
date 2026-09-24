@@ -767,7 +767,7 @@ h3 {
 
   /* Seventh column for the telephone row added only by npm run pdf:private. */
   .identity-card:has(.identity-telephone) {
-    grid-template-columns: 21mm 26mm 28mm 22mm max-content max-content minmax(0, 1fr);
+    grid-template-columns: 23mm 29mm 30mm 24mm max-content max-content minmax(0, 1fr);
   }
 
   .identity-card div {
