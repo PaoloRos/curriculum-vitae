@@ -60,6 +60,7 @@ Report which checks ran and any checks that could not run.
 - Do not commit, push, open a pull request, delete branches, or rewrite history
   unless Paolo explicitly asks for that action. Confirm whether he wants Codex
   to publish the work or plans to publish it himself.
-- Do not add AI co-author or generated-by trailers unless explicitly requested.
+- Whenever ChatGPT creates a Git commit, include a `Co-authored-by` trailer
+  naming ChatGPT and the model used.
 - Never rewrite published history merely to rename or remove historical tool or
   assistant attribution.
