@@ -53,8 +53,9 @@ sections:
         paragraphs:
           - Berufserfahrungen bei der Apfel- und Weinlese.
       - heading: Erfahrungen in der Gastronomie
-        meta: 2020–2023
+        meta: 2020–2023, 2026
         paragraphs:
+          - Derzeit arbeitet er im Four Points by Sheraton Bolzano als Kellner auf Abruf.
           - Erfahrungen im Gastronomieservice und im direkten Kundenkontakt bei McDonald’s und der Gelateria Oasi in Meran.
         annex_ids: [esperienza-ristorazione-2020, esperienza-ristorazione-2021, esperienza-gelateria-2023]
   - id: progetti-formativi

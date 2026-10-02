@@ -53,8 +53,9 @@ sections:
         paragraphs:
           - Work experience in the apple and grape harvests.
       - heading: Food-service experience
-        meta: 2020–2023
+        meta: 2020–2023, 2026
         paragraphs:
+          - He currently works at Four Points by Sheraton Bolzano as an on-call waiter.
           - Experience in food service and customer-facing sales at McDonald’s and Gelateria Oasi in Merano.
         annex_ids: [esperienza-ristorazione-2020, esperienza-ristorazione-2021, esperienza-gelateria-2023]
   - id: progetti-formativi
