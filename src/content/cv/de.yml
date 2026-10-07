@@ -31,11 +31,14 @@ sections:
   - id: istruzione
     title: Ausbildung
     entries:
-      - heading: Bachelorabschluss in Industrieingenieurwesen
-        meta: Universität Trient · März 2026 · in Regelstudienzeit im Abschlussprüfungszeitraum des Studienjahres 2024/25 abgeschlossen
+      - heading: Masterstudium Intelligent Mechatronics Engineering - laufend
+        meta: Universität Trient · im September 2026 immatrikuliert · Abschlussklasse LM-33
         paragraphs:
-          - Bachelorstudium der Klasse L-9 mit Schwerpunkt Systeme, abgeschlossen mit 100/110 Punkten.
-          - Nach dem Bachelorabschluss wurden im Hinblick auf die für September 2026 geplante Einschreibung bereits einige Lehrveranstaltungen des Masterstudiengangs Mechatronik vorgezogen.
+          - Nach Abschluss des Bachelorstudiums wurden einige Lehrveranstaltungen des Masterstudiengangs vorgezogen.
+      - heading: Bachelorabschluss in Industrieingenieurwesen
+        meta: Universität Trient · März 2026
+        paragraphs:
+          - Bachelorstudium der Klasse L-9 mit Schwerpunkt Systeme, in Regelstudienzeit mit 100/110 Punkten abgeschlossen.
       - heading: Abschluss eines humanistischen Gymnasiums
         meta: I.I.S.S. Gandhi, Meran · 2022
         paragraphs:
