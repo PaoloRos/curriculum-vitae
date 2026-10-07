@@ -1,9 +1,13 @@
-# Attuale esperienza lavorativa
+# Aggiornamenti in generale
 
-Aggiungere in **tutte e tre le lingue** l'attuale esperienza lavorativa, con anche l'anno corrente. Aggiungilo nella sezione "Esperienze lavorative"
+Modifica l'ordine delle esperienze lavorative, prima quelle più recenti:
 
-Descrizione:
+1. Esperienze nella ristorazione
 
-"Attualmente lavora presso Four Points by Sheraton Bolzano in qualità di cameriere (a chiamata)."
+2. Lavori stagionali in agricoltura
 
-Inserisci questa riga sopra a quella già presente.
+3. Educatore di italiano e inglese
+
+Nelle esperienze lavorative voglio risaltare che attualemnte sto lavorando: metti in grassetto **Attualmente**... così dovrebbe cadere subito all'occhio. Se hai altre porposte dimmelo!
+
+Modifica in tutte e tre le lingue.

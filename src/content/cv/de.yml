@@ -46,21 +46,20 @@ sections:
   - id: esperienze-lavorative
     title: Berufserfahrung
     entries:
+      - heading: Erfahrungen in der Gastronomie
+        meta: Derzeit · Kellner auf Abruf im Four Points by Sheraton Bolzano · seit 2026
+        paragraphs:
+          - Frühere Erfahrungen (2020–2023) im Gastronomieservice und im direkten Kundenkontakt bei McDonald’s und der Gelateria Oasi in Meran.
+        annex_ids: [esperienza-ristorazione-2020, esperienza-ristorazione-2021, esperienza-gelateria-2023]
+      - heading: Saisonarbeit in der Landwirtschaft
+        meta: Herbst 2022, Herbst 2026
+        paragraphs:
+          - Berufserfahrungen bei der Apfel- und Weinlese.
       - heading: Betreuer für Italienisch und Englisch
         meta: We For You · Juli 2024
         paragraphs:
           - Bildungsangebote für deutschsprachige Kinder.
         annex_ids: [esperienza-we-for-you]
-      - heading: Saisonarbeit in der Landwirtschaft
-        meta: Herbst 2022, Herbst 2026
-        paragraphs:
-          - Berufserfahrungen bei der Apfel- und Weinlese.
-      - heading: Erfahrungen in der Gastronomie
-        meta: 2020–2023, 2026
-        paragraphs:
-          - Derzeit arbeitet er im Four Points by Sheraton Bolzano als Kellner auf Abruf.
-          - Erfahrungen im Gastronomieservice und im direkten Kundenkontakt bei McDonald’s und der Gelateria Oasi in Meran.
-        annex_ids: [esperienza-ristorazione-2020, esperienza-ristorazione-2021, esperienza-gelateria-2023]
   - id: progetti-formativi
     title: Bildungsprojekte
     entries:

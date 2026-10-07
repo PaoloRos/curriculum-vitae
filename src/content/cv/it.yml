@@ -47,21 +47,20 @@ sections:
   - id: esperienze-lavorative
     title: Esperienze lavorative
     entries:
+      - heading: Esperienze nella ristorazione
+        meta: Attualmente · cameriere (a chiamata) presso Four Points by Sheraton Bolzano · dal 2026
+        paragraphs:
+          - Esperienze precedenti (2020–2023) nel servizio di ristorazione e nella vendita al pubblico presso McDonald’s e la Gelateria Oasi di Merano.
+        annex_ids: [esperienza-ristorazione-2020, esperienza-ristorazione-2021, esperienza-gelateria-2023]
+      - heading: Lavori stagionali in agricoltura
+        meta: Autunno 2022, autunno 2026
+        paragraphs:
+          - Esperienze lavorative nella raccolta di mele e uva.
       - heading: Educatore di italiano e inglese
         meta: We For You · luglio 2024
         paragraphs:
           - Attività educative rivolte a bambini di madrelingua tedesca.
         annex_ids: [esperienza-we-for-you]
-      - heading: Lavori stagionali in agricoltura
-        meta: Autunno 2022, autunno 2026
-        paragraphs:
-          - Esperienze lavorative nella raccolta di mele e uva.
-      - heading: Esperienze nella ristorazione
-        meta: 2020–2023, 2026
-        paragraphs:
-          - Attualmente lavora presso Four Points by Sheraton Bolzano in qualità di cameriere (a chiamata).
-          - Esperienze nel servizio di ristorazione e nella vendita al pubblico presso McDonald’s e la Gelateria Oasi di Merano.
-        annex_ids: [esperienza-ristorazione-2020, esperienza-ristorazione-2021, esperienza-gelateria-2023]
   - id: progetti-formativi
     title: Progetti formativi
     entries:
