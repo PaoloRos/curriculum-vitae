@@ -20,13 +20,13 @@
     "update-date": "node scripts/update-date.ts"
   },
   "dependencies": {
-    "astro": "^7.2.2",
+    "astro": "^7.4.7",
     "pdfjs-dist": "^6.2.108",
     "yaml": "^2.9.0",
     "zod": "^4.4.3"
   },
   "devDependencies": {
-    "@astrojs/check": "^0.9.10",
+    "@astrojs/check": "^0.9.12",
     "@axe-core/playwright": "^4.13.0",
     "@playwright/test": "^1.62.1",
     "@types/node": "^26.2.0",

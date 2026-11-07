@@ -26,7 +26,7 @@ identity:
   mother_tongue: Italienisch
 intro:
   - Ich habe einen Bachelorabschluss in Industrieingenieurwesen und interessiere mich besonders für Datenanalyse und Softwareentwicklung.
-  - In meiner Freizeit treibe ich verschiedene Sportarten, vorzugsweise in der Natur. Außerdem lese ich zu vielfältigen Themen und höre gerne Classic Rock und Jazz. Ich reise gerne, um neue Orte und Kulturen kennenzulernen.
+  - In meiner Freizeit treibe ich verschiedene Sportarten, bin gerne in den Bergen und tanze gerne. Außerdem lese ich gerne und höre Classic Rock und Jazz. Ich reise gerne, um neue Orte zu entdecken und andere Kulturen kennenzulernen.
 sections:
   - id: istruzione
     title: Ausbildung
@@ -114,7 +114,7 @@ sections:
         annex_ids: [certificazione-linguistica]
       - heading: Digitale Kompetenzen
         bullets:
-          - Grundlagen in C/C++ und R.
+          - Grundlagen in C/C++ und R; derzeit lerne ich Python mit Schwerpunkt auf maschinellem Lernen.
           - Grundlagen in MATLAB/Simulink und Wolfram Mathematica.
           - Büroautomatisierung und allgemeine digitale Werkzeuge.
 annexes:
